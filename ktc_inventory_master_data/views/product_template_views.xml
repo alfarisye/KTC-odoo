@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ktc_product_template_form_inherited" model="ir.ui.view">
+            <field name="name">ktc product template form inherited</field>
+            <field name="model">product.template</field>
+            <field name="inherit_id" ref="product.product_template_form_view" />
+            <field name="type">form</field>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='detailed_type']" position="before">
+                    <field name="description" />
+                </xpath>
+                <xpath expr="//field[@name='uom_po_id']" position="after">
+                    <field name="stock_code" />
+                    <field name="brand_id" />
+                    <field name="size" />
+                    <field name="product_class_id" />
+                    <field name="product_commodity_id" />
+                    <field name="product_category_id" />
+                    <field name="ktc_category_id" />
+                </xpath>
+                <xpath expr="//field[@name='product_tag_ids']" position="after">
+                    <field name="shelf_life" />
+                    <field name="physical_number" />
+                    <field name="status" />
+                    <field name="obsolete" />
+                    <field name="new_part_number" />
+                </xpath>
+                <xpath expr="//page[@name='inventory']" position="after">
+                    <page string="Product Specification" name="product_specification">
+                        <group name="model">
+                            <field name="original_part_number" />
+                        </group>
+                        <group name="manufacturing">
+                            <field name="manufacturer_part_number" />
+                        </group>
+                    </page>
+                    <page string="Location" name="product_location">
+                        <group>
+                            <field name="warehouse_id" />
+                            <field name="shelf_location" />
+                            <field name="bin_location" />
+                        </group>
+                    </page>
+                    <page string="Attachments" name="Attachments">
+                        <group>
+                            <field name="attachment" />
+                        </group>
+                        <group>
+                        </group>
+                    </page>
+                    <page string="Block For Replenishment" name="block_for_replenishment">
+                        <group>
+                            <field name="reflenishment_status" />
+                            <field name="reason" />
+                        </group>
+                        <group>
+                        </group>
+                    </page>
+                </xpath>
+                <xpath expr="//field[@name='categ_id']" position="attributes">
+                    <attribute name="string">Account Set</attribute>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

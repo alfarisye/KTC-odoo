@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ktc_commodity_group_code,access_ktc_commodity_group_code,model_ktc_commodity_group_code,base.group_user,1,1,1,1
+access_ktc_supplier_product_classification,access_ktc_supplier_product_classification,model_ktc_supplier_product_classification,base.group_user,1,1,1,1
+access_ktc_business_reference,access_ktc_business_reference,model_ktc_business_reference,base.group_user,1,1,1,1

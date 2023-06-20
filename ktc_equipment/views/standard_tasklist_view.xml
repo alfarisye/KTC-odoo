@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="hit_standard_tasklist_form_view" model="ir.ui.view">
+            <field name="name">hit_standard_tasklist_form_view</field>
+            <field name="model">ktc.standard.tasklist</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Task Name"></field>
+                            </h1>
+                        </div>
+                        <group>
+                            <field name="schedule_maintenance_group_id"></field>
+                            <field name="service_type_id"></field>
+                        </group>
+                        <notebook>
+                            <page string="Task List">
+                                <field name="tasklist_line_ids">
+                                    <tree editable="top">
+                                        <field name="name"></field>
+                                        <field name="desc"></field>
+                                        <field name="skill_set"></field>   
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ktc_standard_tasklist_act_window" model="ir.actions.act_window">
+            <field name="name">Service Type</field>
+            <field name="res_model">ktc.standard.tasklist</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record to get started
+                </p>
+                <p>
+                    Welcome to Standard Tasklist.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="ktc_menu_standard_tasklist" name="Standard Tasklist" parent="maintenance.menu_equipment_form" action="ktc_standard_tasklist_act_window" sequence="60"/>
+
+    </data>
+
+</odoo>

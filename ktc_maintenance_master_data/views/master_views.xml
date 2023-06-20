@@ -1,0 +1,454 @@
+<odoo>
+  <data>
+    <!-- Site Master Data Act Window -->
+    <record id="ktc_site_md_act_window" model="ir.actions.act_window">
+        <field name="name">Site Master Data</field>
+        <field name="res_model">ktc.md.site</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Site Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_site_master_data form view -->
+    <record id="ktc_site_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_site_master_data.view.form</field>
+      <field name="model">ktc.md.site</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Rent Status Master Data Act Window -->
+    <record id="ktc_rent_status_md_act_window" model="ir.actions.act_window">
+        <field name="name">Rent Status Master Data</field>
+        <field name="res_model">ktc.md.rent.status</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Rent Status Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_rent_status_master_data form view -->
+    <record id="ktc_rent_status_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_rent_status_master_data.view.form</field>
+      <field name="model">ktc.md.rent.status</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Machine Status Master Data Act Window -->
+    <record id="ktc_machine_status_md_act_window" model="ir.actions.act_window">
+        <field name="name">Machine Status Master Data</field>
+        <field name="res_model">ktc.md.machine.status</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Machine Status Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_machine_status_master_data form view -->
+    <record id="ktc_machine_status_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_machine_status_master_data.view.form</field>
+      <field name="model">ktc.md.machine.status</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Account Set Master Data Act Window -->
+    <record id="ktc_account_set_md_act_window" model="ir.actions.act_window">
+        <field name="name">Account Set Master Data</field>
+        <field name="res_model">ktc.md.account.set</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Account Set Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_account_set_master_data form view -->
+    <record id="ktc_account_set_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_account_set_master_data.view.form</field>
+      <field name="model">ktc.md.account.set</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Machine Code Master Data Act Window -->
+    <record id="ktc_machine_code_md_act_window" model="ir.actions.act_window">
+        <field name="name">Machine Code Master Data</field>
+        <field name="res_model">ktc.md.machine.code</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Machine Code Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_machine_code_master_data form view -->
+    <record id="ktc_machine_code_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_machine_code_master_data.view.form</field>
+      <field name="model">ktc.md.machine.code</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Machine Type Master Data Act Window -->
+    <record id="ktc_machine_type_md_act_window" model="ir.actions.act_window">
+        <field name="name">Machine Type Master Data</field>
+        <field name="res_model">ktc.md.machine.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Machine Type Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_machine_type_master_data form view -->
+    <record id="ktc_machine_type_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_machine_type_master_data.view.form</field>
+      <field name="model">ktc.md.machine.type</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Machine Category Master Data Act Window -->
+    <record id="ktc_machine_category_md_act_window" model="ir.actions.act_window">
+        <field name="name">Machine Category Master Data</field>
+        <field name="res_model">ktc.md.machine.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Machine Category Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_machine_category_master_data form view -->
+    <record id="ktc_machine_category_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_machine_category_master_data.view.form</field>
+      <field name="model">ktc.md.machine.category</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Machine Category Master Data Act Window -->
+    <record id="ktc_machine_category_md_act_window" model="ir.actions.act_window">
+        <field name="name">Machine Category Master Data</field>
+        <field name="res_model">ktc.md.machine.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Machine Category Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_machine_category_master_data form view -->
+    <record id="ktc_machine_category_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_machine_category_master_data.view.form</field>
+      <field name="model">ktc.md.machine.category</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- ktc_category_master_data form view -->
+    <record id="ktc_category_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_category_master_data.view.form</field>
+      <field name="model">ktc.md.category</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Category Master Data Act Window -->
+    <record id="ktc_category_md_act_window" model="ir.actions.act_window">
+        <field name="name">Category Master Data</field>
+        <field name="res_model">ktc.md.category</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Category Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_brand_master_data form view -->
+    <record id="ktc_brand_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_brand_master_data.view.form</field>
+      <field name="model">ktc.md.brand</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Brand Master Data Act Window -->
+    <record id="ktc_brand_md_act_window" model="ir.actions.act_window">
+        <field name="name">Brand Master Data</field>
+        <field name="res_model">ktc.md.brand</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Brand Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_model_master_data form view -->
+    <record id="ktc_model_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_model_master_data.view.form</field>
+      <field name="model">ktc.md.model</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+              <field name="attachment" widget="binary" filename="file_name"/>
+              <field name="file_name" invisible="1"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- model Master Data Act Window -->
+    <record id="ktc_model_md_act_window" model="ir.actions.act_window">
+        <field name="name">Model Master Data</field>
+        <field name="res_model">ktc.md.model</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Brand Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_class_master_data form view -->
+    <record id="ktc_class_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_class_master_data.view.form</field>
+      <field name="model">ktc.md.class</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Class Master Data Act Window -->
+    <record id="ktc_class_md_act_window" model="ir.actions.act_window">
+        <field name="name">Class Master Data</field>
+        <field name="res_model">ktc.md.class</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Class Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_schedule_maintenance_master_data form view -->
+    <record id="ktc_schedule_maintenance_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_schedule_maintenance_master_data.view.form</field>
+      <field name="model">ktc.md.schedule.maintenance</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Schedule Maintenance Master Data Act Window -->
+    <record id="ktc_schedule_maintenance_md_act_window" model="ir.actions.act_window">
+        <field name="name">Schedule Maintenance Grouping Master Data</field>
+        <field name="res_model">ktc.md.schedule.maintenance</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Schedule Maintenance Master Data.
+            </p>
+        </field>
+    </record>
+
+    <!-- ktc_warranty_type form view -->
+    <record id="ktc_schedule_maintenance_master_data_view_form" model="ir.ui.view">
+      <field name="name">ktc_warranty_type.view.form</field>
+      <field name="model">ktc.md.warranty.type</field>
+      <field name="arch" type="xml">
+        <form string="">
+          <sheet>
+            <group>
+              <field name="name"></field>
+              <field name="active" widget="boolean_toggle"/>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+
+    <!-- Schedule Maintenance Master Data Act Window -->
+    <record id="ktc_warranty_type_md_act_window" model="ir.actions.act_window">
+        <field name="name">Warranty Type Master Data</field>
+        <field name="res_model">ktc.md.warranty.type</field>
+        <field name="view_mode">tree,form</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started
+            </p>
+            <p>
+                Welcome to Warranty Type Master Data.
+            </p>
+        </field>
+    </record>
+
+    <menuitem id="ktc_menu_md_view_parent" name="Master Data" parent="maintenance.menu_maintenance_configuration" sequence="30"/>
+    <menuitem id="ktc_menu_md_view_site" name="Site" parent="ktc_menu_md_view_parent" action="ktc_site_md_act_window" sequence="30"/>
+    <menuitem id="ktc_menu_md_view_rent_status" name="Rent Status" parent="ktc_menu_md_view_parent" action="ktc_rent_status_md_act_window" sequence="40"/>
+    <menuitem id="ktc_menu_md_account_set_status" name="Account Set" parent="ktc_menu_md_view_parent" action="ktc_account_set_md_act_window" sequence="50"/>
+    <menuitem id="ktc_menu_md_view_machine_status" name="Machine Status" parent="ktc_menu_md_view_parent" action="ktc_machine_status_md_act_window" sequence="50"/>
+    <menuitem id="ktc_menu_md_view_machine_code" name="Machine Code" parent="ktc_menu_md_view_parent" action="ktc_machine_code_md_act_window" sequence="60"/>
+    <menuitem id="ktc_menu_md_view_machine_type" name="Machine Type" parent="ktc_menu_md_view_parent" action="ktc_machine_type_md_act_window" sequence="70"/>
+    <menuitem id="ktc_menu_md_view_machine_category" name="Machine Category" parent="ktc_menu_md_view_parent" action="ktc_machine_category_md_act_window" sequence="80"/>
+    <menuitem id="ktc_menu_md_view_category" name="Category" parent="ktc_menu_md_view_parent" action="ktc_category_md_act_window" sequence="90"/>
+    <menuitem id="ktc_menu_md_view_brand" name="Brand" parent="ktc_menu_md_view_parent" action="ktc_brand_md_act_window" sequence="90"/>
+    <menuitem id="ktc_menu_md_view_model" name="Model" parent="ktc_menu_md_view_parent" action="ktc_model_md_act_window" sequence="90"/>
+    <menuitem id="ktc_menu_md_view_class" name="Class" parent="ktc_menu_md_view_parent" action="ktc_class_md_act_window" sequence="90"/>
+    <menuitem id="ktc_menu_md_view_schedule_maintenance" name="Schedule Maintenance Grouping" parent="ktc_menu_md_view_parent" action="ktc_schedule_maintenance_md_act_window" sequence="90"/>
+    <menuitem id="ktc_menu_md_view_warranty_type" name="Warranty Type" parent="ktc_menu_md_view_parent" action="ktc_warranty_type_md_act_window" sequence="90"/>
+  </data>
+</odoo>

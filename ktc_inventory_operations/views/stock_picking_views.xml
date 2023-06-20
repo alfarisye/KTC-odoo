@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ktc_view_picking_form_inherited" model="ir.ui.view">
+            <field name="name">stock.picking.form.inherited</field>
+            <field name="model">stock.picking</field>
+            <field name="inherit_id" ref="stock.view_picking_form" />
+            <field name="type">form</field>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//form/sheet/group[1]" position="after">
+                    <group>
+                        <group name="group_left">
+                            <field name="warehouse_id" />
+                            <field name="request_by" />
+                        </group>
+                        <group name="group_right">
+                            <field name="delivery_date" />
+                        </group>
+                    </group>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/form/group/field[@name='product_id']" position="before">
+                    <field name="categ_id"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="before">
+                    <field name="categ_id"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/form/group/field[@name='product_id']" position="after">
+                    <field name="manufacturer_part_number" optional="show"/>
+                    <field name="quantity_reserved"/>
+                    <field name="quantity_delivery"/>
+                    <field name="quantity_actual_receipt"/>
+                    <field name="quantity_done"/>
+                    <field name="substitute" />
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/tree/field[@name='product_id']" position="after">
+                    <field name="manufacturer_part_number" optional="show"/>
+                    <field name="quantity_reserved"/>
+                    <field name="quantity_delivery"/>
+                    <field name="quantity_actual_receipt"/>
+                    <field name="quantity_done"/>
+                    <field name="substitute" />
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/form/group/field[@name='product_uom']" position="after">
+                    <field name="transfer_priority" optional="show" widget="priority"/>
+                    <field name="attachment" optional="show"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='operations']/field[@name='move_ids_without_package']/tree/field[@name='product_uom']" position="after">
+                    <field name="transfer_priority" optional="show" widget="priority"/>
+                    <field name="attachment" optional="show"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='extra']/group/group/field[@name='company_id']" position="after">
+                    <field name="reason_delay"/>
+                </xpath>
+                <xpath expr="//form/sheet/notebook/page[@name='note']" position="after">
+                    <page string="Approval" name="Approval">
+                        <group>
+                        </group>
+                        <group>
+                        </group>
+                    </page>
+                    <page string="Attachment" name="attachment">
+                        <group>
+                            <field name="attachment" widget="pdf_viewer"/>
+                        </group>
+                        <group>
+                            <field name="photos" widget="image"/>
+                        </group>
+                    </page>
+                    <page string="Substitute Part" name="substitute">
+                        <field name="move_ids_substitute">
+                            <tree>
+                                <field name="categ_id" />
+                                <field name="product_id" />
+                                <field name="manufacturer_part_number" optional="show"/>
+                                <field name="quantity_reserved"/>
+                                <field name="quantity_delivery"/>
+                                <field name="quantity_actual_receipt"/>
+                                <field name="quantity_done"/>
+                                <field name="product_uom" />
+                            </tree>
+                        </field>
+                    </page>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

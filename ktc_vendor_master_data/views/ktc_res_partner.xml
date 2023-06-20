@@ -1,0 +1,59 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <!-- res.partner inherit form view -->
+    <record id="ktc_custom_view_vendor_master_data_form" model="ir.ui.view">
+        <field name="name">ktc_custom_view_vendor_master_data_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <!-- Add your xpath here -->
+            <xpath expr="//sheet/group/group/span[@name='address_name']" position="before">
+                <field name="holding_company"/>
+                <field name="company_director"/>
+            </xpath>
+            <xpath expr="//sheet/group/group/field[@name='vat']" position="attributes">
+                <attribute name="invisible">1</attribute>
+            </xpath>
+            <xpath expr="//sheet/group/group/field[@name='vat']" position="after">
+                <field name="tax_id"/>
+                <field name="vat_code"/>
+                <field name="id_pkp"/>
+                <field name="iso_certified"/>
+                <field name="iso_certificate"/>
+            </xpath>
+            <xpath expr="//sheet/group/group/field[@name='website']" position="after">
+                <field name="fax"/>
+            </xpath>
+            <xpath expr="//sheet/group/group/field[@name='category_id']" position="after">
+                <field name="commodity_id"/>
+                <field name="supp_prod_class_id"/>
+                <field name="business_reference_ids" string="Business Refferences">
+                    <tree editable="bottom">
+                        <field name="sequence" widget="handle"/>
+                        <field name="name" string="Business"/>
+                    </tree>
+                </field>
+            </xpath>
+            <xpath expr="//page[@name='sales_purchases']//field[@name='user_id']" position="before">
+                <field name="turn_on_per_year"/>
+            </xpath>
+             <xpath expr="//page[@name='sales_purchases']//field[@name='property_product_pricelist']" position="attributes">
+                <attribute name="string">Pricelist Currency</attribute>
+            </xpath>
+            <xpath expr="//field[@name='property_supplier_payment_term_id']" position="after">
+                <field name="payment_method_id"/>
+            </xpath>
+            <xpath expr="//group[@name='purchase']" position="inside">
+                <field name="credit_limit_value"/>
+            </xpath>
+            <xpath expr="//group[@name='misc']" position="before">
+                <group name="legality" string="Legality">
+                    <field name="nib"/>
+                    <field name="certificate"/>
+                    <field name="business_line"/>
+                </group>
+            </xpath>
+            
+        </field>
+    </record>
+</odoo>

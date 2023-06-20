@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="ktc_tire_form_view_tree" model="ir.ui.view">
+            <field name="name">Tire Form</field>
+            <field name="model">ktc.tire.form</field>
+            <field name="arch" type="xml">
+                
+                <tree string="Tire E Form">
+                    <field name="name" />
+                    <field name="tire_sn" />
+                    <field name="brand" />
+                </tree>
+                
+            </field>
+        </record>
+
+        <!-- tyre form view -->
+        <record id="ktc_tire_form_view_form" model="ir.ui.view">
+            <field name="name">Tire E Form</field>
+            <field name="model">ktc.tire.form</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Tire Transaction" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="tire_sn" />
+                                <field name="brand" />
+                                <field name="size" />
+                                <field name="thread_new" />
+                                <field name="equipment_master_id" />
+                                <field name="site_id" />
+                                <field name="position" />
+                                <field name="total_day" />
+                                <field name="lifetime_hm" />
+                                <field name="lifetime_km" />
+                            </group>
+                            <group>
+                                <field name="tire_installation_date" />
+                                <field name="hm_installation_date" />
+                                <field name="km_installation_date" />
+                                <field name="tire_replacement_date" />
+                                <field name="hm_damage" />
+                                <field name="km_damage" />
+                                <field name="tread_condition" />
+                                <field name="tire_status" />
+                                <field name="accumulative_hm" />
+                                <field name="accumulative_km" />
+                                <field name="accumulative_total_day" />
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="Attachment">
+                                <field name="file_upload" widget="binary" filename="file_name"/>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ktc_tire_form_act_window" model="ir.actions.act_window">
+            <field name="name">Tire E Form Action</field>
+            <field name="res_model">ktc.tire.form</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record to get started
+                </p>
+                <p>
+                    Welcome to Tire E Form.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="ktc_menu_tire_form" name="Tire E Form" parent="maintenance.menu_equipment_form" action="ktc_tire_form_act_window" sequence="60"/>
+
+    </data>
+
+</odoo>

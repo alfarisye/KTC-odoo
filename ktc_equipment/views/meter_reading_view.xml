@@ -1,0 +1,82 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Measuring Reading List form view -->
+        <record id="hit_measuring_reading_form_view" model="ir.ui.view">
+            <field name="name">hit_measuring_reading_form_view</field>
+            <field name="model">ktc.meter.reading</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="equipment_id"></field>
+                            <field name="accumulative_hourmeter"></field>
+                            <field name="accumulative_kilometer"></field>
+                        </group>
+                        <notebook>
+                            <page string="Meter Utilization">
+                                <field name="meter_line_ids">
+                                    <tree editable="top" default_order="measuring_date DESC">
+                                        <field name="meter_reading_id" invisible="1"></field>
+                                        <field name="measuring_date"></field>
+                                        <field name="measuring_type"></field>
+                                        <field name="start"></field>
+                                        <field name="end"></field>
+                                        <field name="run_time"></field>
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Reset Meter">
+                                <field name="reset_line_ids">
+                                    <tree editable="top" default_order="measuring_date DESC">
+                                        <field name="reset_date"></field>
+                                        <field name="measuring_type"></field>
+                                        <field name="from_reading"></field>
+                                        <field name="to_reading"></field>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Measuring Reading tree view -->
+        <record id="measuring_reading_view_tree" model="ir.ui.view">
+            <field name="name">Measuring Reading</field>
+            <field name="model">ktc.meter.reading</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="equipment_id"></field>
+                    <field name="accumulative_hourmeter"></field>
+                    <field name="accumulative_kilometer"></field>
+                </tree>
+            </field>
+        </record>
+
+        <!-- Measuring Reading action window -->
+        <record id="ktc_measuring_reading_act_window" model="ir.actions.act_window">
+            <field name="name">Meter Reading</field>
+            <field name="res_model">ktc.meter.reading</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record to get started
+                </p>
+                <p>
+                    Welcome to Meter Reading.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="ktc_menu_measuring_reading" name="Meter Reading" parent="maintenance.menu_equipment_form" action="ktc_measuring_reading_act_window" sequence="30"/>
+        <menuitem
+                id="menu_equipment_form_child"
+                name="Equipments"
+                parent="maintenance.menu_equipment_form"
+                action="maintenance.hr_equipment_action"
+                groups="maintenance.group_equipment_manager,base.group_user"
+                sequence="2"/>
+    </data>
+</odoo>

@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="ktc_service_package_view_tree" model="ir.ui.view">
+            <field name="name">Service Package</field>
+            <field name="model">ktc.service.package</field>
+            <field name="arch" type="xml">
+                
+                <tree string="Service Package">
+                    <field name="name" />
+                    <field name="schedule_maintenance_group_id" />
+                    <field name="description" />
+                </tree>
+                
+            </field>
+        </record>
+
+        <!-- service.package form view -->
+        <record id="ktc_service_package_view_form" model="ir.ui.view">
+            <field name="name">Service Package form</field>
+            <field name="model">ktc.service.package</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <group>
+                            <field name="name" />
+                            <field name="schedule_maintenance_group_id" />
+                            <field name="description" />
+                        </group>
+                        <notebook>
+                            <page string="Item">
+                                <field name="service_package_item_ids">
+                                    <tree editable="bottom">
+                                        <field name="internal_reference" />
+                                        <field name="manufacturer_part_number" />
+                                        <field name="product_id" />
+                                        <field name="uom_id" />
+                                        <field name="qty" />
+                                        <field name="remark" />
+                                    </tree>
+                                </field>
+                            </page>
+                            <page string="Warranty">
+                                <field name="service_package_warranty_ids">
+                                    <tree editable="bottom">
+                                        <field name="internal_reference" />
+                                        <field name="manufacturer_part_number" />
+                                        <field name="product_id" />
+                                        <field name="uom_id" />
+                                        <field name="qty" />
+                                        <field name="remark" />
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ktc_service_package_act_window" model="ir.actions.act_window">
+            <field name="name">Service Package</field>
+            <field name="res_model">ktc.service.package</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record to get started
+                </p>
+                <p>
+                    Welcome to Service Package.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="ktc_menu_service_package" name="Service Package" parent="maintenance.menu_equipment_form" action="ktc_service_package_act_window" sequence="50"/>
+
+    </data>
+
+</odoo>

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ktc_stock_scrap_form_inherited" model="ir.ui.view">
+            <field name="name">ktc.stock.scrap.form.inherited</field>
+            <field name="model">stock.scrap</field>
+            <field name="inherit_id" ref="stock.stock_scrap_form_view" />
+            <field name="type">form</field>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='product_id']" position="before">
+                    <field name="date" />
+                </xpath>
+                <xpath expr="//group[1]" position="after">
+                    <notebook>
+                        <page string="Attachment" name="Attachment">
+                            <group>
+                                <field name="attachment" />
+                            </group>
+                            <group>
+                            </group>
+                        </page>
+                    </notebook>
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

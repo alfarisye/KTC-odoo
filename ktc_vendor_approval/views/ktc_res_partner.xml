@@ -1,0 +1,90 @@
+<odoo>
+  <record id="ktc_approval_vendor_action" model="ir.actions.act_window">
+        <field name="name">My Approval Vendor</field>
+        <field name="res_model">res.partner</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('state','=','to_approve'),('current_assigned_to','=',uid)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Approvals Requests
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="ktc_menu_approval_vendor"
+        parent="purchase.menu_procurement_management"
+        action="ktc_approval_vendor_action"
+        sequence="16"
+    />
+
+    <record id="ktc_custom_view_vendor_form" model="ir.ui.view">
+        <field name="name">custom_view_vendor_form</field>
+        <field name="model">res.partner</field>
+        <field name="inherit_id" ref="base.view_partner_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//sheet" position="before">
+                <header>
+                    <!-- <button
+                        name="winprof_button_draft"
+                        states="to_approve,rejected,on_hold"
+                        string="Reset"
+                        type="object"
+                    /> -->
+                    <button
+                        name="winprof_button_hold"
+                        string="On Hold"
+                        type="object"
+                        class="btn-warning"
+                        attrs="{'invisible': ['|',('show_button_approve','=',False),('state','=','on_hold')]}"
+                    />
+                    <button
+                        name="winprof_button_to_approve"
+                        states="draft"
+                        string="Request approval"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button
+                        name="winprof_button_approve"
+                        string="Approve"
+                        type="object"
+                        class="btn-success"
+                        attrs="{'invisible': [('show_button_approve','=',False)]}"
+                    />
+                    <button
+                        name="winprof_button_reject"
+                        string="Reject"
+                        type="object"
+                        class="btn-danger"
+                        attrs="{'invisible': [('show_button_approve','=',False)]}"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,to_approve,approved,rejected,on_hold,done"
+                        statusbar_colors='{"approved":"blue"}'
+                    />
+                </header>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Release Strategy">
+                    <group>
+                        <field name="current_assigned_to"/>
+                        <field name="show_button_approve" invisible="1"/>
+                    </group>
+                    <field name="release_strategy_ids">
+                        <tree>
+                            <field name="user_id"/>
+                            <field name="state"/>
+                            <field name="note"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+            <!-- <xpath expr="//sheet/group/group/span[@name='address_name']" position="before">
+                <field name="remark_vendor"/>
+            </xpath> -->
+        </field>
+    </record>
+</odoo>

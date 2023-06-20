@@ -1,0 +1,2 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_ktc_purchase_request_approval_ktc_purchase_request_approval,ktc_purchase_request_approval.ktc_purchase_request_approval,model_ktc_purchase_request_approval_ktc_purchase_request_approval,base.group_user,1,1,1,1

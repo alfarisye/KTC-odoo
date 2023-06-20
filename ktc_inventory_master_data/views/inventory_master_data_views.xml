@@ -1,0 +1,385 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+    <!-- [A] PRODUCT CLASS -->
+    <!-- Tree view for "Product Class" -->
+    <record id="ktc_md_product_class_view_tree" model="ir.ui.view">
+      <field name="name">Product Class Master Data List</field>
+      <field name="model">ktc.md.product.class</field>
+      <field name="type">tree</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <tree string="model_tree" create="true" delete="true" edit="true">
+          <field name="name" />
+          <field name="create_date" />
+          <field name="active" widget="boolean_toggle"/>
+        </tree>
+      </field>
+    </record>
+    <!-- Form view for "Product Class" -->
+    <record id="ktc_md_product_class_view_form" model="ir.ui.view">
+      <field name="name">Product Class Master Data Form</field>
+      <field name="model">ktc.md.product.class</field>
+      <field name="type">form</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <form string="model_form" create="true" delete="true" edit="true">
+          <header>
+          </header>
+          <sheet>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" />
+              <h1>
+                <field name="name" class="oe_inline" placeholder="name" />
+              </h1>
+            </div>
+            <group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Search view for "Product Class" -->
+    <record id="ktc_md_product_class_search" model="ir.ui.view">
+      <field name="name">Product Class Master Data Search</field>
+      <field name="model">ktc.md.product.class</field>
+      <field name="type">search</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <search string="model_search">
+          <field name="name" />
+        </search>
+      </field>
+    </record>
+    <!-- Main window action for "Product Class" -->
+    <record id="ktc_md_product_class_view_act_window" model="ir.actions.act_window">
+      <field name="type">ir.actions.act_window</field>
+      <field name="name">Product Class Master Data</field>
+      <field name="res_model">ktc.md.product.class</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started.
+            </p>
+        <p>
+                Welcome to Product Class Master Data.
+            </p>
+      </field>
+    </record>
+    <!-- [B] PRODUCT COMMODITY -->
+    <!-- Tree view for "Product Commodity" -->
+    <record id="ktc_md_product_commodity_view_tree" model="ir.ui.view">
+      <field name="name">Product Commodity Master Data List</field>
+      <field name="model">ktc.md.product.commodity</field>
+      <field name="type">tree</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <tree string="model_tree" create="true" delete="true" edit="true">
+          <field name="name" />
+          <field name="create_date" />
+          <field name="active" widget="boolean_toggle"/>
+          <field name="description" />
+        </tree>
+      </field>
+    </record>
+    <!-- Form view for "Product Commodity" -->
+    <record id="ktc_md_product_commodity_view_form" model="ir.ui.view">
+      <field name="name">Product Commodity Master Data Form</field>
+      <field name="model">ktc.md.product.commodity</field>
+      <field name="type">form</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <form string="model_form" create="true" delete="true" edit="true">
+          <header>
+          </header>
+          <sheet>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" />
+              <h1>
+                <field name="name" class="oe_inline" placeholder="name" />
+              </h1>
+            </div>
+            <group>
+              <field name="description" />
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Search view for "Product Commodity" -->
+    <record id="ktc_md_product_commodity_search" model="ir.ui.view">
+      <field name="name">Product Commodity Master Data Search</field>
+      <field name="model">ktc.md.product.commodity</field>
+      <field name="type">search</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <search string="model_search">
+          <field name="name" />
+        </search>
+      </field>
+    </record>
+    <!-- Main window action for "Product Commodity" -->
+    <record id="ktc_md_product_commodity_act_window" model="ir.actions.act_window">
+      <field name="type">ir.actions.act_window</field>
+      <field name="name">Product Commodity Master Data</field>
+      <field name="res_model">ktc.md.product.commodity</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started.
+            </p>
+        <p>
+                Welcome to Product Commodity Master Data.
+            </p>
+      </field>
+    </record>
+    <!-- [C] ACCOUNT SET -->
+    <!-- Tree view for "Account Set" -->
+    <record id="ktc_md_account_set_view_tree" model="ir.ui.view">
+      <field name="name">Account Set Master Data List</field>
+      <field name="model">ktc.md.account.set</field>
+      <field name="type">tree</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <tree string="model_tree" create="true" delete="true" edit="true">
+          <field name="name" />
+          <field name="description" />
+        </tree>
+      </field>
+    </record>
+    <!-- Form view for "Account Set" -->
+    <record id="ktc_md_account_set_view_form" model="ir.ui.view">
+      <field name="name">Account Set Master Data Form</field>
+      <field name="model">ktc.md.account.set</field>
+      <field name="type">form</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <form string="model_form" create="true" delete="true" edit="true">
+          <header>
+          </header>
+          <sheet>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" />
+              <h1>
+                <field name="name" class="oe_inline" placeholder="name" />
+              </h1>
+            </div>
+            <group>
+              <field name="description" />
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Search view for "Account Set" -->
+    <record id="ktc_md_account_set_search" model="ir.ui.view">
+      <field name="name">Account Set Master Data Search</field>
+      <field name="model">ktc.md.account.set</field>
+      <field name="type">search</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <search string="model_search">
+          <field name="name" />
+        </search>
+      </field>
+    </record>
+    <!-- Main window action for "Account Set" -->
+    <record id="ktc_md_account_set_act_window" model="ir.actions.act_window">
+      <field name="type">ir.actions.act_window</field>
+      <field name="name">Account Set Master Data</field>
+      <field name="res_model">ktc.md.account.set</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started.
+            </p>
+        <p>
+                Welcome to Account Set Master Data.
+            </p>
+      </field>
+    </record>
+    <!-- [D] KTC CATEGORY -->
+    <!-- Tree view for "KTC Category" -->
+    <record id="ktc_md_inventory_category_view_tree" model="ir.ui.view">
+      <field name="name">KTC Category Master Data List</field>
+      <field name="model">ktc.md.inventory.category</field>
+      <field name="type">tree</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <tree string="model_tree" create="true" delete="true" edit="true">
+          <field name="name" />
+          <field name="range_price" />
+        </tree>
+      </field>
+    </record>
+    <!-- Form view for "KTC Category" -->
+    <record id="ktc_md_inventory_category_view_form" model="ir.ui.view">
+      <field name="name">KTC Category Master Data Form</field>
+      <field name="model">ktc.md.inventory.category</field>
+      <field name="type">form</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <form string="model_form" create="true" delete="true" edit="true">
+          <header>
+          </header>
+          <sheet>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" />
+              <h1>
+                <field name="name" class="oe_inline" placeholder="name" />
+              </h1>
+            </div>
+            <group>
+              <field name="range_price" />
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Search view for "KTC Category" -->
+    <record id="ktc_md_inventory_category_search" model="ir.ui.view">
+      <field name="name">KTC Category Master Data Search</field>
+      <field name="model">ktc.md.inventory.category</field>
+      <field name="type">search</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <search string="model_search">
+          <field name="name" />
+        </search>
+      </field>
+    </record>
+    <!-- Main window action for "KTC Category" -->
+    <record id="ktc_md_inventory_category_act_window" model="ir.actions.act_window">
+      <field name="type">ir.actions.act_window</field>
+      <field name="name">KTC Category Master Data</field>
+      <field name="res_model">ktc.md.inventory.category</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started.
+            </p>
+        <p>
+                Welcome to KTC Category Master Data.
+            </p>
+      </field>
+    </record>
+    <!-- [E] PRODUCT CATEGORY -->
+    <!-- Tree view for "Product Category" -->
+    <record id="ktc_md_product_category_view_tree" model="ir.ui.view">
+      <field name="name">Product Category Master Data List</field>
+      <field name="model">ktc.md.product.category</field>
+      <field name="type">tree</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <tree string="model_tree" create="true" delete="true" edit="true">
+          <field name="name" />
+          <field name="create_date" />
+          <field name="active" widget="boolean_toggle"/>
+        </tree>
+      </field>
+    </record>
+    <!-- Form view for "Product Category" -->
+    <record id="ktc_md_product_category_view_form" model="ir.ui.view">
+      <field name="name">Product Category Master Data Form</field>
+      <field name="model">ktc.md.product.category</field>
+      <field name="type">form</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <form string="model_form" create="true" delete="true" edit="true">
+          <header>
+          </header>
+          <sheet>
+            <div class="oe_title">
+              <label for="name" class="oe_edit_only" />
+              <h1>
+                <field name="name" class="oe_inline" placeholder="name" />
+              </h1>
+            </div>
+            <group>
+            </group>
+          </sheet>
+        </form>
+      </field>
+    </record>
+    <!-- Search view for "Product Category" -->
+    <record id="ktc_md_product_category_search" model="ir.ui.view">
+      <field name="name">Product Category Master Data Search</field>
+      <field name="model">ktc.md.product.category</field>
+      <field name="type">search</field>
+      <field name="mode">primary</field>
+      <field name="priority" eval="16" />
+      <field name="active" eval="True" />
+      <field name="arch" type="xml">
+        <search string="model_search">
+          <field name="name" />
+        </search>
+      </field>
+    </record>
+    <!-- Main window action for "Product Category" -->
+    <record id="ktc_md_product_category_view_act_window" model="ir.actions.act_window">
+      <field name="type">ir.actions.act_window</field>
+      <field name="name">Product Category Master Data</field>
+      <field name="res_model">ktc.md.product.category</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started.
+            </p>
+        <p>
+                Welcome to Product Category Master Data.
+            </p>
+      </field>
+    </record>
+    <!-- Main window action for "Brand" -->
+    <record id="ktc_md_product_brand_view_act_window" model="ir.actions.act_window">
+      <field name="type">ir.actions.act_window</field>
+      <field name="name">Brand Master Data</field>
+      <field name="res_model">ktc.md.brand</field>
+      <field name="view_mode">tree,form</field>
+      <field name="help" type="html">
+        <p class="o_view_nocontent_smiling_face">
+                Add a new record to get started.
+            </p>
+        <p>
+                Welcome to Brand Master Data.
+            </p>
+      </field>
+    </record>
+    <!-- Inventory Menu Master Data -->
+    <menuitem id="ktc_menu_inventory_md_parent" name="Master Data" parent="stock.menu_stock_config_settings" sequence="30"/>
+    <menuitem id="ktc_menu_md_product_brand" name="Brand" parent="ktc_menu_inventory_md_parent" action="ktc_md_product_brand_view_act_window" sequence="30"/>
+    <menuitem id="ktc_menu_md_product_class" name="Product Class" parent="ktc_menu_inventory_md_parent" action="ktc_md_product_class_view_act_window" sequence="40"/>
+    <menuitem id="ktc_menu_md_product_commodity" name="Product Commodity" parent="ktc_menu_inventory_md_parent" action="ktc_md_product_commodity_act_window" sequence="50"/>
+    <menuitem id="ktc_menu_md_account_set" name="Account Set" parent="ktc_menu_inventory_md_parent" action="ktc_md_account_set_act_window" sequence="60"/>
+    <menuitem id="ktc_menu_md_inventory_category" name="KTC Category" parent="ktc_menu_inventory_md_parent" action="ktc_md_inventory_category_act_window" sequence="70"/>
+    <menuitem id="ktc_menu_md_product_category" name="Product Category" parent="ktc_menu_inventory_md_parent" action="ktc_md_product_category_view_act_window" sequence="80"/>
+  </data>
+</odoo>

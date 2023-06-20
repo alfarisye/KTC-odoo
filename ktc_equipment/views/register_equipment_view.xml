@@ -1,0 +1,92 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Register Equipment Master List form view -->
+        <record id="ktc_register_equipment_master_list" model="ir.ui.view">
+            <field name="name">ktc_register_equipment_master_list</field>
+            <field name="model">ktc.register.equipment</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <header>
+                        <button name="to_progress" string="On Progress" type="object" states="draft" class="oe_highlight"/>
+                        <button name="to_done" string="Done" type="object" states="in_progress" class="oe_highlight"/>
+                        <field name="state" widget="statusbar" options="{'draft': {'done': {'color': 'green'} } }"/>
+                    </header>
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Request Register Unit" />
+                            </h1>
+                        </div>
+                        <div class="o_employee_avatar">
+                            <field name="equipment_image" widget="image" class="oe_avatar m-0"></field>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="category_id"></field>
+                                <field name="machine_type_id"></field>
+                                <field name="class_id"></field>
+                            </group>
+                            <group>
+                                <field name="site_id"></field>
+                            </group>
+                            <group>
+                                <field name="description"></field>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="General Information">
+                                <group>
+                                    <group>
+                                        <field name="machine_code_id"></field>
+                                        <field name="machine_type_id"></field>
+                                        <field name="machine_category_id"></field>
+                                        <field name="width"></field>
+                                        <field name="weight"></field>
+                                        <field name="length"></field>
+                                        <field name="height"></field>
+                                    </group>
+                                    <group>
+                                        <field name="serial_number"></field>
+                                        <field name="manufacturing_year"></field>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Warranty">
+                                <group>
+                                    <group>
+                                        <field name="warrant_type_id"></field>
+                                        <field name="start_date"></field>
+                                        <field name="hourmeter"></field>
+                                        <field name="kilometer"></field>
+                                    </group>
+                                    <group>
+                                        <field name="end_date"></field>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Register Equipment Master action window -->
+        <record id="ktc_register_equipment_act_window" model="ir.actions.act_window">
+            <field name="name">Request Register Equipment Master List</field>
+            <field name="res_model">ktc.register.equipment</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record to get started
+                </p>
+                <p>
+                    Welcome to Register Equipment.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="ktc_menu_register_equipment_list" name="Request Register Equipment Master List" parent="maintenance.menu_m_request" action="ktc_register_equipment_act_window" sequence="40"/>
+
+    </data>
+</odoo>

@@ -1,0 +1,5 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ktc_inventory_operations.access_ktc_salvaged_material,access_ktc_salvaged_material,ktc_inventory_operations.model_ktc_salvaged_material,base.group_user,1,1,1,1
+ktc_inventory_operations.access_ktc_salvaged_material_line,access_ktc_salvaged_material_line,ktc_inventory_operations.model_ktc_salvaged_material_line,base.group_user,1,1,1,1
+
+

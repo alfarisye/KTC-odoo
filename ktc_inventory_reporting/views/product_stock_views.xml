@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+    <data>
+        <record id="ktc_product_product_stock_tree_inherited" model="ir.ui.view">
+            <field name="name">ktc.product.product.stock.tree.inherited</field>
+            <field name="model">product.product</field>
+            <field name="inherit_id" ref="stock.product_product_stock_tree" />
+            <field name="type">tree</field>
+            <field name="mode">extension</field>
+            <field name="arch" type="xml">
+                <xpath expr="//field[@name='uom_id']" position="after">
+                    <field name="status" />
+                    <field name="discrepancy" />
+                    <field name="blind_cost" />
+                    <field name="approval" />
+                </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

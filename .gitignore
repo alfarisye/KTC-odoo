@@ -1,0 +1,25 @@
+# Odoo-specific ignores
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+*.egg
+
+# Odoo log files
+logs/
+*.log
+
+# Odoo database files
+*.dump
+*.sql
+*.db
+
+# Odoo backup files
+*~
+.*.swp
+*.bak
+*.orig
+
+# Odoo custom addons
+*/__pycache__/
+**/**/__pycache__/

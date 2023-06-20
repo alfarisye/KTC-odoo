@@ -1,0 +1,93 @@
+<?xml version='1.0' encoding='utf-8'?>
+<odoo>
+    <data>
+        <!-- Equipment Master List form view -->
+        <record id="ktc_equipment_master_list" model="ir.ui.view">
+            <field name="name">ktc_equipment_master_list</field>
+            <field name="model">ktc.equipment.master</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Request Register Unit" />
+                            </h1>
+                        </div>
+                        <div class="o_employee_avatar">
+                            <field name="equipment_image" widget="image" class="oe_avatar m-0"></field>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="category_id"></field>
+                                <field name="machine_type_id"></field>
+                                <field name="class_id"></field>
+                            </group>
+                            <group>
+                                <field name="site_id"></field>
+                            </group>
+                            <group>
+                                <field name="description"></field>
+                            </group>
+                        </group>
+                        <notebook>
+                            <page string="General Information">
+                                <group>
+                                    <group>
+                                        <field name="machine_code_id"></field>
+                                        <field name="machine_type_id"></field>
+                                        <field name="machine_category_id"></field>
+                                        <field name="width"></field>
+                                        <field name="weight"></field>
+                                        <field name="length"></field>
+                                        <field name="height"></field>
+                                    </group>
+                                    <group>
+                                        <field name="serial_number"></field>
+                                        <field name="manufacturing_year"></field>
+                                        <field name="age"></field>
+                                        <field name="measurement_id"></field>
+                                        <field name="last_hourmeter"></field>
+                                        <field name="last_kilometer"></field>
+                                        <field name="accumulative_hourmeter"></field>
+                                        <field name="accumulative_kilometer"></field>
+                                    </group>
+                                </group>
+                            </page>
+                            <page string="Warranty">
+                                <group>
+                                    <group>
+                                        <field name="warrant_type_id"></field>
+                                        <field name="warrant_start_date" string="Start Date"></field>
+                                        <field name="warrant_hourmeter" string="Hourmeter"></field>
+                                        <field name="warrant_kilometer" string="Kilometer"></field>
+                                    </group>
+                                    <group>
+                                        <field name="warrant_end_date" string="End Date"></field>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!-- Equipment Master action window -->
+        <record id="ktc_equipment_master_act_window" model="ir.actions.act_window">
+            <field name="name">Equipment Master</field>
+            <field name="res_model">ktc.equipment.master</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record to get started
+                </p>
+                <p>
+                    Welcome to Equipment Master.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="ktc_menu_equipment_master_list" name="Equipment Master List" parent="maintenance.menu_m_request" action="ktc_equipment_master_act_window" sequence="30"/>
+
+    </data>
+</odoo>

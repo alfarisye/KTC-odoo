@@ -1,0 +1,17 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+ktc_access_site_md,ktc_access_site_md,model_ktc_md_site,base.group_user,1,1,1,1
+ktc_access_rent_status_md,ktc_access_rent_status_md,model_ktc_md_rent_status,base.group_user,1,1,1,1
+ktc_access_machine_status_md,ktc_access_machine_status_md,model_ktc_md_machine_status,base.group_user,1,1,1,1
+ktc_access_account_set_md,ktc_access_account_set_md,model_ktc_md_account_set,base.group_user,1,1,1,1
+ktc_access_machine_code_md,ktc_access_machine_code_md,model_ktc_md_machine_code,base.group_user,1,1,1,1
+ktc_access_machine_type_md,ktc_access_machine_type_md,model_ktc_md_machine_type,base.group_user,1,1,1,1
+ktc_access_machine_category_md,ktc_access_machine_category_md,model_ktc_md_machine_category,base.group_user,1,1,1,1
+ktc_access_category_md,ktc_access_category_md,model_ktc_md_category,base.group_user,1,1,1,1
+ktc_access_brand_md,ktc_access_brand_md,model_ktc_md_brand,base.group_user,1,1,1,1
+ktc_access_model_md,ktc_access_model_md,model_ktc_md_model,base.group_user,1,1,1,1
+ktc_access_class_md,ktc_access_class_md,model_ktc_md_class,base.group_user,1,1,1,1
+ktc_access_schedule_maintenance_md,ktc_access_schedule_maintenance_md,model_ktc_md_schedule_maintenance,base.group_user,1,1,1,1
+ktc_access_warranty_type_md,ktc_access_warranty_type_md,model_ktc_md_warranty_type,base.group_user,1,1,1,1
+
+
+

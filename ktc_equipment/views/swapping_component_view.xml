@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+
+    <data>
+
+        <record id="ktc_swapping_component_view_tree" model="ir.ui.view">
+            <field name="name">Swapping Component</field>
+            <field name="model">ktc.swapping.component</field>
+            <field name="arch" type="xml">
+                
+                <tree string="Swapping Component">
+                    <field name="name" string="Swap Number" />
+                    <field name="component_id"  />
+                    <field name="serial_number" />
+
+                    <field name="old_parent" />
+                    <field name="old_uninstall_date" />
+                    <field name="old_uninstall_hm" />
+                    <field name="old_uninstall_km" />
+
+                    <field name="new_parent" />
+                    <field name="new_install_date" />
+                    <field name="new_install_hm" />
+                    <field name="new_install_km" />
+
+                </tree>
+                
+            </field>
+        </record>
+
+        <record id="ktc_swapping_component_view_form" model="ir.ui.view">
+            <field name="name">Swapping Component</field>
+            <field name="model">ktc.swapping.component</field>
+            <field name="arch" type="xml">
+                <form string="">
+                    <sheet>
+                        <div class="oe_title">
+                            <h1>
+                                <field name="name" placeholder="Swap Transaction" />
+                            </h1>
+                        </div>
+                        <group>
+                            <group>
+                                <field name="component_id" />
+                                <field name="serial_number" />
+                                <field name="part_number" />
+                            </group>
+                            <group>
+                                <field name="work_order" />
+                            </group>
+                            <group>
+                                <field name="old_parent" />
+                                <field name="old_uninstall_date" />
+                                <field name="old_uninstall_hm" />
+                                <field name="old_uninstall_km" />
+                            </group>
+                            <group>
+                                <field name="new_parent" />
+                                <field name="new_install_date" />
+                                <field name="new_install_hm" />
+                                <field name="new_install_km" />
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="ktc_swapping_component_act_window" model="ir.actions.act_window">
+            <field name="name">Swapping Component Action</field>
+            <field name="res_model">ktc.swapping.component</field>
+            <field name="view_mode">tree,form</field>
+            <field name="help" type="html">
+                <p class="o_view_nocontent_smiling_face">
+                    Add a new record to get started
+                </p>
+                <p>
+                    Welcome to Swapping Component.
+                </p>
+            </field>
+        </record>
+        
+        <menuitem id="ktc_swapping_component_menu" name="Swapping Component" parent="maintenance.menu_equipment_form" action="ktc_swapping_component_act_window" sequence="70"/>
+
+    </data>
+
+</odoo>

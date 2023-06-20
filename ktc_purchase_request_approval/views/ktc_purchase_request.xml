@@ -1,0 +1,92 @@
+<odoo>
+  <record id="ktc_approval_purchase_request_action" model="ir.actions.act_window">
+        <field name="name">My Approval</field>
+        <field name="res_model">purchase.request</field>
+        <field name="view_mode">kanban,tree,form</field>
+        <field name="domain">[('state','=','to_approve'),('current_assigned_to','=',uid)]</field>
+        <field name="help" type="html">
+            <p class="o_view_nocontent_smiling_face">
+                No Approvals Requests
+            </p>
+        </field>
+    </record>
+
+    <menuitem
+        id="ktc_menu_approval_purchase_request"
+        parent="purchase_request.parent_menu_purchase_request"
+        action="ktc_approval_purchase_request_action"
+    />
+
+    <record id="ktc_custom_view_purchase_request_form" model="ir.ui.view">
+        <field name="name">custom_view_purchase_request_form</field>
+        <field name="model">purchase.request</field>
+        <field name="inherit_id" ref="purchase_request.view_purchase_request_form"/>
+        <field name="arch" type="xml">
+            <xpath expr="//form//header" position="replace">
+                <header>
+                    <!-- <button
+                        name="winprof_button_draft"
+                        states="to_approve,rejected,on_hold"
+                        string="Reset"
+                        type="object"
+                    /> -->
+                    <button
+                        name="winprof_button_hold"
+                        string="On Hold"
+                        type="object"
+                        class="btn-warning"
+                        attrs="{'invisible': ['|',('show_button_approve','=',False),('state','=','on_hold')]}"
+                    />
+                    <button
+                        name="winprof_button_to_approve"
+                        states="draft"
+                        string="Request approval"
+                        type="object"
+                        class="oe_highlight"
+                    />
+                    <button
+                        name="winprof_button_approve"
+                        string="Approve"
+                        type="object"
+                        class="btn-success"
+                        attrs="{'invisible': [('show_button_approve','=',False)]}"
+                    />
+                    <button
+                        name="winprof_button_reject"
+                        string="Reject"
+                        type="object"
+                        class="btn-danger"
+                        attrs="{'invisible': [('show_button_approve','=',False)]}"
+                    />
+                    <button
+                        name="%(purchase_request.action_purchase_request_line_make_purchase_order)d"
+                        states="approved"
+                        string="Create RFQ"
+                        type="action"
+                    />
+                    <field
+                        name="state"
+                        widget="statusbar"
+                        statusbar_visible="draft,to_approve,approved,rejected,on_hold,done"
+                        statusbar_colors='{"approved":"blue"}'
+                    />
+                </header>
+            </xpath>
+            <xpath expr="//notebook" position="inside">
+                <page string="Release Strategy">
+                    <group>
+                        <field name="current_assigned_to"/>
+                        <field name="show_button_approve" invisible="1"/>
+                    </group>
+                    <field name="release_strategy_ids">
+                        <tree>
+                            <field name="user_id"/>
+                            <field name="state"/>
+                            <field name="note"/>
+                        </tree>
+                    </field>
+                </page>
+            </xpath>
+        </field>
+    </record>
+</odoo>
